@@ -1,0 +1,8 @@
+<%= form_for "admin", {controller: "sessions", action:"login"} do |f| %>
+  <%= f.label "Administrator Login" %><br>
+
+  <%= f.label :password %>:
+  <%= f.text_field :password_plaintext %> <br/>
+
+  <%= f.submit value: "login"%>
+<% end %>

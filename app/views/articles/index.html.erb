@@ -1,0 +1,39 @@
+<% if current_admin? %>
+<div class="admin-nav btn-group" role="group">
+  <%= link_to "add article", new_article_path, {class: "btn btn-default", role: "button"} %>
+  <%= link_to "logout", {controller: 'sessions', action: 'logout'}, {class: "btn btn-default", role: "button"} %>
+</div>
+<% end %>
+
+
+
+<%= render partial: 'layouts/sidebar' %>
+
+<div class="container col-xs-8 articles-container">
+  <div class="row">
+
+    <div class="col-xs-6 portfolio-item pull-left">
+      <a href="#">
+        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+      </a>
+
+    </div>
+    <div class="col-xs-6 portfolio-item pull-left">
+      <a href="#">
+        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+      </a>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Copyright &copy; Your Website 2014</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
