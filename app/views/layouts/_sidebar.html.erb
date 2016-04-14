@@ -1,3 +1,5 @@
 <aside class="container col-xs-4 sidebar">
-  <h2>SIDEBAR</h2>
+  <% Publication.all.each do |publication| %>
+    <h4><%= publication.name %></h4>
+  <% end %>
 </aside>

@@ -8,7 +8,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(title: article_params[:title])
+    @article = Article.new(article_params)
+    @article.picture_from_url(@article.url)
     if @article.save
       redirect_to '/'
     else
@@ -28,6 +29,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :id)
+    params.require(:article).permit(:title, :url, :publication_id)
   end
 end

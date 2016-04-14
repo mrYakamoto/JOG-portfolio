@@ -5,7 +5,22 @@
 
   <%= f.label :title %>:
   <%= f.text_field :title %> <br/>
+  <%= f.label :url %>:
+  <%= f.text_field :url %> <br/>
+  <%= f.label "publication id" %>:
+  <%= f.number_field :publication_id%> <br/>
 
-  <%= f.submit value: "add"%>
+  <%= f.submit value: "add article"%>
 <% end %>
 
+<% Publication.all.each do |publication| %>
+<h5><%= publication.id %>)<%= publication.name %> <%=link_to "delete", publication, method: :delete, class: "btn btn-danger btn-sm", role: "button" %></h5>
+
+<% end %>
+
+<%= form_for 'publication', url: {controller: 'publications', action: 'create'} do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %> <br/>
+
+  <%= f.submit value: "add publication"%>
+<% end %>
