@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -6738,4 +6739,89 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
+/* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+div.main-content {
+  padding-top: 129px;
+}
+
+/* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
+aside.sidebar {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  border-right: 1px dotted black;
+}
+
+/* line 8, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
+.highlight {
+  background-color: yellow;
+}
+
+/* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+div.articles-container {
+  position: absolute;
+  padding: 10px 5px 0 5px;
+  right: 0;
+}
+
+/* line 8, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+div.portfolio-item {
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 0;
+}
+
+/* line 14, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+/* line 22, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+.overlay h3 {
+  display: none;
+  position: absolute;
+  padding: 0 10px 0px 10px;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  background-color: white;
+}
+
+/* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
+div.main-header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px dotted black;
+  background-color: white;
+}
+
+/* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/admin.scss */
+div.admin-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
