@@ -3,6 +3,7 @@ class CreateArticles < ActiveRecord::Migration
     create_table :articles do |t|
       t.string :title
       t.string :url
+      t.string :image_url
 
       t.integer :publication_id
 

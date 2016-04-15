@@ -8,20 +8,30 @@
 <div class="container col-xs-8 articles-container">
 
   <% Article.all.each do |article|%>
-    <div class="col-xs-6 portfolio-item pull-left">
-      <a href="#">
-         <%= image_tag article.picture.url(:thumb), :class => "img-responsive" %>
+    <div class="col-xs-6 portfolio-item pull-left" dataid=<%=article.id%> >
+      <% if current_admin? %>
+      <div class="admin-controls">
+        <p><span class="glyphicon glyphicon-arrow-up"></span>    <span class="glyphicon glyphicon-arrow-down"></span>    <span class="glyphicon glyphicon-remove"></span></p>
+      </div>
+      <% end %>
+      <a href="<%= article.url %>">
+         <%= image_tag article.picture.url(:thumb), {class: "img-responsive", id: "image-#{article.id}", dataId: "#{article.id}" } %>
       </a>
+      <div class="overlay">
+        <a href="<%=article.url%>">
+        <h3 class="overlay-title">
+          <%= article.title %>
+        </h3>
+      </a>
+      </div>
     </div>
   <% end %>
 
   <hr>
 
   <footer>
-    <div class="row">
-      <div class="col-xs-12">
-        <p>Copyright &copy; Your Website 2014</p>
-      </div>
+    <div class="col-xs-12">
+      <p>Copyright &copy; Jason O. Gilbert 2016</p>
     </div>
   </footer>
 

@@ -1,5 +1,20 @@
 <aside class="container col-xs-4 sidebar">
-  <% Publication.all.each do |publication| %>
-    <h4><%= publication.name %></h4>
+  <% @publications.each do |publication| %>
+  <div class="publication-container" id="pub-<%= publication.id %>-container">
+    <h4 class="publication-name" id="publication-<%= publication.id %>" dataid="<%= publication.id %>">
+      <%= publication.name %>
+    </h4>
+    <div class="pub-titles hidden" id="pub-<%= publication.id %>-titles">
+      <% publication.articles.each do |article|%>
+      <a href="<%= article.url %>">
+        <h5 class="article-title" id="article-<%= article.id %>" dataid="<%= article.id %>">
+          <%= article.title %>
+        </h5>
+      </a>
+      <% end %>
+    </div>
+    <hr>
+  </div>
   <% end %>
+
 </aside>
