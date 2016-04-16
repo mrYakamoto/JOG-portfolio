@@ -20,9 +20,11 @@ ActiveRecord::Schema.define(version: 20160413230330) do
     t.string   "title"
     t.string   "url"
     t.string   "image_url"
+    t.integer  "featured"
+    t.integer  "priority",             default: 0
     t.integer  "publication_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"

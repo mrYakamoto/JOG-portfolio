@@ -16,6 +16,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem "paperclip", "~> 5.0.0.beta1"
 
+# heroku asset handling
+gem 'rails_12factor', group: :production
+gem 'hirb'
+
 group :development, :test do
   gem 'byebug'
 end
@@ -23,3 +27,5 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+ruby "2.2.1"

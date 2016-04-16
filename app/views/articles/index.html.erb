@@ -1,5 +1,5 @@
 <% if current_admin? %>
-  <%= render partial: 'layouts/admin_nav' %>
+<%= render partial: 'layouts/admin_nav' %>
 <% end %>
 
 
@@ -7,32 +7,29 @@
 
 <div class="container col-xs-8 articles-container">
 
-  <% Article.all.each do |article|%>
-    <div class="col-xs-6 portfolio-item pull-left" dataid=<%=article.id%> >
-      <% if current_admin? %>
-      <div class="admin-controls">
-        <p><span class="glyphicon glyphicon-arrow-up"></span>    <span class="glyphicon glyphicon-arrow-down"></span>    <span class="glyphicon glyphicon-remove"></span></p>
-      </div>
-      <% end %>
-      <a href="<%= article.url %>">
-         <%= image_tag article.picture.url(:thumb), {class: "img-responsive", id: "image-#{article.id}", dataId: "#{article.id}" } %>
-      </a>
-      <div class="overlay">
-        <a href="<%=article.url%>">
-        <h3 class="overlay-title">
-          <%= article.title %>
-        </h3>
-      </a>
-      </div>
+  <% @articles.each do |article|%>
+  <div class="col-xs-6 portfolio-item pull-left" dataid=<%=article.id%> datapriority=<%= article.priority %>>
+    <% if current_admin? %>
+    <div class="admin-controls">
+      <p><span class="glyphicon glyphicon-arrow-up priority-arrow priority-up"></span>  <span class="priority-number"><%= article.priority %></span>  <span class="glyphicon glyphicon-arrow-down priority-arrow priority-down"></span>    <a href="/articles/<%= article.id %>/edit"><span class="glyphicon glyphicon-pencil"></span></a>    <span class="glyphicon glyphicon-remove delete-article"></span></p>
     </div>
-  <% end %>
+    <% end %>
+    <a href="<%= article.url %>">
+     <%= image_tag article.picture.url(:thumb), {class: "img-responsive", id: "image-#{article.id}", dataId: "#{article.id}" } %>
+   </a>
+   <div class="overlay">
+    <a href="<%=article.url%>">
+    </a>
+  </div>
+</div>
+<% end %>
 
-  <hr>
+<hr>
 
-  <footer>
-    <div class="col-xs-12">
-      <p>Copyright &copy; Jason O. Gilbert 2016</p>
-    </div>
-  </footer>
+<footer>
+  <div class="col-xs-12">
+    <p>Copyright &copy; Jason O. Gilbert 2016</p>
+  </div>
+</footer>
 
 </div>

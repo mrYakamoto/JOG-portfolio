@@ -4,7 +4,8 @@ class CreateArticles < ActiveRecord::Migration
       t.string :title
       t.string :url
       t.string :image_url
-
+      t.integer :featured
+      t.integer :priority, { default: 0 }
       t.integer :publication_id
 
       t.timestamps null: false

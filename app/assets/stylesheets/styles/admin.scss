@@ -2,5 +2,16 @@ div.admin-nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2
+  z-index: 100
+}
+
+.admin-controls {
+  background-color: white;
+  position: absolute;
+  top:0;
+  left: 10px;
+  z-index: 3;
+  padding: 0 10px 0 10px;
+  p { margin: 0; }
+  span { cursor: pointer;}
 }
