@@ -4,7 +4,7 @@
     <h4 class="publication-name" id="publication-<%= publication.id %>" dataid="<%= publication.id %>">
       <%= publication.name %>
     </h4>
-    <div class="pub-titles hidden" id="pub-<%= publication.id %>-titles">
+    <div class="pub-titles" id="pub-<%= publication.id %>-titles">
       <% publication.articles.each do |article|%>
       <a href="<%= article.url %>">
         <h5 class="article-title" id="article-<%= article.id %>" dataid="<%= article.id %>">

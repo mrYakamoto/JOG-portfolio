@@ -1,24 +1,61 @@
 div.articles-container {
   position: absolute;
   padding: 10px 5px 0 5px;
-
+  overflow: hidden;
   right: 0;
+
 }
 
 div.portfolio-item {
-  padding-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 0;
+  background: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .overlay {
-
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top:0;
-  left:0;
+  position: absolute;
+  background-color: white;
+  overflow: hidden;
+  top: 0;
+  height: 0;
+  left: 5px;
+  right: 0;
+  bottom: 5px;
   z-index: 2;
-
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  h2 {
+    font-size: 2rem;
+    color: black;
+    margin: 15px 0 0 0;
+    padding-bottom: 10px;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  p {
+    color: black;
+    text-align: right;
+    border-bottom: 1px solid black;
+    padding-right: 10px;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
 }
 
+.portfolio-item:hover .overlay{
+  height: 100%;
+  h2 { opacity: 1; }
+  p { opacity: 1; }
+}

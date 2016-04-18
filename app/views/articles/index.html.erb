@@ -17,10 +17,12 @@
     <a href="<%= article.url %>">
      <%= image_tag article.picture.url(:thumb), {class: "img-responsive", id: "image-#{article.id}", dataId: "#{article.id}" } %>
    </a>
-   <div class="overlay">
-    <a href="<%=article.url%>">
+   <a href="<%= article.url %>">
+    <div class="overlay">
+      <h2><%= article.title %></h2>
+      <p><%= article.publication.name %></p>
+    </div>
     </a>
-  </div>
 </div>
 <% end %>
 
