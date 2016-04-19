@@ -36,9 +36,9 @@ function removeHighlight(){
 
 // sidebar click
 function sideBarPublicationListener(){
-  $('div.publication-container').click(function(e){
+  $('.sidebar .publication-name').click(function(e){
     e.preventDefault();
-    $(this).find('div.pub-titles').toggle('medium')
+    $(this).parent().find('div.pub-titles').toggle('medium')
   })
 }
 // end sidebar click
@@ -74,10 +74,11 @@ function priorityArrowListener(){
 }
 
 function deleteArticleListener(){
-  $('span.delete-article').click(function(){
+  $('span.delete-article').click(function(e){
+    e.preventDefault();
     var isSure=confirm('Are you sure you want to delete this article?');
     if (isSure) {
-      var id = $(this).closest('div.portfolio-item').attr('dataid');
+      var id = $(this).attr('dataid');
       $.ajax({
         url: ( '/articles/' + id ),
         method: 'delete'
@@ -94,7 +95,9 @@ function deleteArticleListener(){
 }
 function removeArticle(id){
   $('div.portfolio-item[dataid='+id+']').remove();
+  $('.sidebar .article-title[dataid='+id+']').remove();
 }
+
 
 
 // end admin controls

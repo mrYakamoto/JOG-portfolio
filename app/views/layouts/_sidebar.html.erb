@@ -1,4 +1,4 @@
-<aside class="container col-xs-4 sidebar">
+<aside class="container col-xs-12 col-sm-4 sidebar">
   <% @publications.each do |publication| %>
   <div class="publication-container" id="pub-<%= publication.id %>-container">
     <h4 class="publication-name" id="publication-<%= publication.id %>" dataid="<%= publication.id %>">
@@ -6,11 +6,18 @@
     </h4>
     <div class="pub-titles" id="pub-<%= publication.id %>-titles">
       <% publication.articles.each do |article|%>
+
       <a href="<%= article.url %>">
         <h5 class="article-title" id="article-<%= article.id %>" dataid="<%= article.id %>">
+          <% if current_admin? %>
+          <a href="/articles/<%= article.id %>/edit"><span class="glyphicon glyphicon-pencil"></span></a>    <a href="#"><span class="glyphicon glyphicon-remove delete-article" dataid=<%=article.id%> ></span></a>
+          <% end %>
           <%= article.title %>
+
         </h5>
+
       </a>
+
       <% end %>
     </div>
     <hr>

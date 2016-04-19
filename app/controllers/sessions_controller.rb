@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
       session[:admin] = true
       redirect_to '/'
     else
-      flash[:error] = "incorrect password"
+      flash.now[:error] = ["incorrect password"]
       render template: 'users/new'
     end
   end

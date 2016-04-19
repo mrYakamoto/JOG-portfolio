@@ -1,8 +1,15 @@
-<%= form_for "admin", {controller: "sessions", action:"login"} do |f| %>
-  <%= f.label "Administrator Login" %><br>
+<% if current_admin? %>
+  <%= render partial: '/layouts/admin_nav' %>
 
-  <%= f.label :password %>:
-  <%= f.text_field :password_plaintext %> <br/>
+<% else %>
 
-  <%= f.submit value: "login"%>
+  <%= form_for "admin", {controller: "sessions", action:"login"} do |f| %>
+    <%= f.label "Administrator Login" %><br>
+
+    <%= f.label :password %>:
+    <%= f.text_field :password_plaintext %> <br/>
+
+    <%= f.submit value: "login"%>
+  <% end %>
+
 <% end %>

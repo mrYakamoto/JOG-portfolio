@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.by_priority
+    @featured_articles = Article.featured_by_priority
     @publications = Publication.all
   end
 
@@ -13,6 +13,10 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to '/'
     else
+      flash.now[:error] = []
+      @article.errors.full_messages.each do |msg|
+        flash.now[:error] << msg
+      end
       render action: 'new'
     end
   end
@@ -48,7 +52,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :url, :image_url, :publication_id, :change)
+    params.require(:article).permit(:title, :url, :image_url, :publication_id, :change, :featured)
   end
   def edit_params
     params.permit(:id)
