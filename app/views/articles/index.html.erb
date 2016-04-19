@@ -5,13 +5,13 @@
 
 <%= render partial: 'layouts/sidebar' %>
 
-<div class="container col-xs-8 articles-container">
+<div class="container col-xs-12 col-sm-8 articles-container">
 
-  <% @articles.each do |article|%>
+  <% @featured_articles.each do |article|%>
   <div class="col-xs-6 portfolio-item pull-left" dataid=<%=article.id%> datapriority=<%= article.priority %>>
     <% if current_admin? %>
     <div class="admin-controls">
-      <p><span class="glyphicon glyphicon-arrow-up priority-arrow priority-up"></span>  <span class="priority-number"><%= article.priority %></span>  <span class="glyphicon glyphicon-arrow-down priority-arrow priority-down"></span>    <a href="/articles/<%= article.id %>/edit"><span class="glyphicon glyphicon-pencil"></span></a>    <span class="glyphicon glyphicon-remove delete-article"></span></p>
+      <p><span class="glyphicon glyphicon-arrow-up priority-arrow priority-up"></span>  <span class="priority-number"><%= article.priority %></span>  <span class="glyphicon glyphicon-arrow-down priority-arrow priority-down"></span>    <a href="/articles/<%= article.id %>/edit"><span class="glyphicon glyphicon-pencil"></span></a>    <span class="glyphicon glyphicon-remove delete-article" dataid=<%=article.id%> ></span></p>
     </div>
     <% end %>
     <a href="<%= article.url %>">
