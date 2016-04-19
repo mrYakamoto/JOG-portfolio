@@ -17,9 +17,20 @@ function imageHoverListener(){
 }
 function showTitles(){
   $(this).find('.overlay-title').slideDown('medium');
+  highlight.call(this);
 }
 function hideTitles(){
   $(this).find('.overlay-title').slideUp('medium');
+  removeHighlight.call(this);
+}
+function highlight(){
+  console.log("INSIDE HIGHLIGHT");
+  var id = $(this).attr('dataid');
+  $("#article-"+id).addClass('highlight');
+}
+function removeHighlight(){
+  var id = $(this).attr('dataid');
+  $("#article-"+id).removeClass('highlight');
 }
 // end image hover
 

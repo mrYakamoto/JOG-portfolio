@@ -1,8 +1,6 @@
 aside.sidebar {
   height: 100%;
-  position: fixed;
   left: 0;
-  overflow: scroll;
 
   .publication-name {
     font-size: 1.3rem;
@@ -14,13 +12,9 @@ aside.sidebar {
     margin: 0;
     color: rgb(153, 153, 153);
   }
-  .article-title:hover {
-    color: #333333;
-  }
+  .article-title:hover { color: #333333; }
 
-  hr { margin: 0;}
+  hr { margin: 0; }
 }
 
-.highlight {
-  background-color: yellow;
-}
+.highlight { background-color: yellow; }
