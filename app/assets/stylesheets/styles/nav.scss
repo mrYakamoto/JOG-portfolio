@@ -4,13 +4,12 @@ div.main-header {
   z-index: 10;
   background-color: white;
 
-  h1 {
-    font-size: 2rem;
-  }
-  ul { text-align: right; }
-  li { display: inline-block; }
-  i {
-    font-size: 3rem;
-  }
+  h1 { font-size: 2rem; }
 }
 
+.social-nav {
+  height: 50px;
+  ul { text-align: right; }
+  li { display: inline-block; }
+  i { font-size: 3rem; }
+}

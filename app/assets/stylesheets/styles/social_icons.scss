@@ -1,0 +1,120 @@
+/*about me*/
+.about-me-link {
+  border: 0px solid black;
+  color: black;
+  background: none;
+
+  position: relative;
+  transition: all .3s;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.about-me-link:after {
+  width: 101%;
+  height: 0%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+
+  background: black;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all .3s;
+}
+
+.about-me-link:hover:after{
+  height: 100%;
+  opacity: 1;
+}
+.about-me-link:hover {
+  color: white;
+}
+
+/*social icons*/
+.hi-icon-wrap {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 0 10px 15px 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.hi-icon:before {
+  speak: none;
+  font-size: 24.32px;
+  line-height: 45px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hi-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+
+
+/* Effect 1 */
+.hi-icon-effect-1 .hi-icon {
+  background: rgba(0,0,0,.1);
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hi-icon-effect-1 .hi-icon:after {
+  top: -7px;
+  left: -7px;
+  padding: 7px;
+  box-shadow: 0 0 0 4px black;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -webkit-transform: scale(.8);
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(.8);
+  opacity: 0;
+}
+
+/*effect 1a*/
+.hi-icon-effect-1a .hi-icon:hover {
+  background: black;
+  color: #41ab6b;
+}
+
+.hi-icon-effect-1a .hi-icon:hover:after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
