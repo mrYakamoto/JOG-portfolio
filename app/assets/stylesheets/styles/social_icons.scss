@@ -39,14 +39,16 @@
 /*social icons*/
 .hi-icon-wrap {
   text-align: center;
-  margin: 0 auto;
+
 }
 
 .hi-icon {
   display: inline-block;
   font-size: 0px;
   cursor: pointer;
-  margin: 0 10px 15px 10px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  margin-left: 5px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -84,7 +86,7 @@
 
 /* Effect 1 */
 .hi-icon-effect-1 .hi-icon {
-  background: rgba(0,0,0,.1);
+  background: rgba(0,0,0,.2);
   -webkit-transition: background 0.2s, color 0.2s;
   -moz-transition: background 0.2s, color 0.2s;
   transition: background 0.2s, color 0.2s;

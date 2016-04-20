@@ -13,7 +13,6 @@ class Article < ActiveRecord::Base
   scope :featured_by_priority, -> { where(:featured => 1).order(:priority => :desc) }
 
   def picture_from_url
-    byebug
     self.picture = URI.parse(self.image_url)
     self.featured = 1
   end

@@ -5,10 +5,13 @@ aside.sidebar {
   .publication-name {
     font-size: 1.3rem;
     margin: 5px 0 0 0;
+    cursor: pointer;
   }
   .article-title {
     font-size: 1.3rem;
     padding-left: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     margin: 0;
     color: rgb(153, 153, 153);
   }
