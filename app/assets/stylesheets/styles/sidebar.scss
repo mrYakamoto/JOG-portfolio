@@ -14,10 +14,21 @@ aside.sidebar {
     padding-bottom: 6px;
     margin: 0;
     color: rgb(153, 153, 153);
+
+    background: #ff3232;
+    background: linear-gradient(to right, yellow 50%, white 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    transition:all .5s ease;
   }
-  .article-title:hover { color: #333333; }
+  .article-title:hover,
+  .highlight {
+    color: #333333 !important;
+    background-position:left bottom !important;
+  }
 
   hr { margin: 0; }
 }
 
-.highlight { background-color: yellow; }
+.article-title { opacity: 0; }
+.publication-name { opacity: 0; }

@@ -9,6 +9,7 @@
   text-align: center;
   padding: 10px 20px;
 }
+.about-me { padding: 20px 10px 20px 20px; }
 
 .about-me-link:after {
   width: 101%;
@@ -16,6 +17,7 @@
   top: 50%;
   left: 50%;
   opacity: 0;
+  padding-bottom: 14px;
   -webkit-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
@@ -32,15 +34,10 @@
   height: 100%;
   opacity: 1;
 }
-.about-me-link:hover {
-  color: white;
-}
+.about-me-link:hover { color: white; }
 
 /*social icons*/
-.hi-icon-wrap {
-  text-align: center;
-
-}
+.hi-icon-wrap { text-align: center; }
 
 .hi-icon {
   display: inline-block;
@@ -86,7 +83,7 @@
 
 /* Effect 1 */
 .hi-icon-effect-1 .hi-icon {
-  background: rgba(0,0,0,.2);
+  background: rgba(192,192,192,1);
   -webkit-transition: background 0.2s, color 0.2s;
   -moz-transition: background 0.2s, color 0.2s;
   transition: background 0.2s, color 0.2s;
@@ -96,7 +93,7 @@
   top: -7px;
   left: -7px;
   padding: 7px;
-  box-shadow: 0 0 0 4px black;
+  box-shadow: 0 0 0 4px rgba(0,102,204,1), 10px 10px 10px 0px black;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
   -webkit-transform: scale(.8);
   -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -109,8 +106,8 @@
 
 /*effect 1a*/
 .hi-icon-effect-1a .hi-icon:hover {
-  background: black;
-  color: #41ab6b;
+  background: rgba(0,102,204,1);
+  color: white;
 }
 
 .hi-icon-effect-1a .hi-icon:hover:after {

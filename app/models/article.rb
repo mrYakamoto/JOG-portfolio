@@ -11,6 +11,7 @@ class Article < ActiveRecord::Base
   validates_presence_of :url
 
   scope :featured_by_priority, -> { where(:featured => 1).order(:priority => :desc) }
+  scope :by_priority, -> { order(:priority => :desc) }
 
   def picture_from_url
     self.picture = URI.parse(self.image_url)

@@ -6,6 +6,10 @@ div.articles-container {
 }
 
 div.portfolio-item {
+  opacity: 0;
+  -webkit-animation: load 5s infinite;
+   animation: load 5s infinite;
+
   overflow: hidden;
   position: relative;
   display: inline-block;

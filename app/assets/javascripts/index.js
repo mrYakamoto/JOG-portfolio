@@ -6,7 +6,28 @@ $( document ).ready(function(){
   sideBarPublicationListener();
   priorityArrowListener();
   deleteArticleListener();
+
+
+  $(".articles-container .portfolio-item").each(function(index) {
+    $(this).delay(150*index).animate({opacity: 1},100);
+  });
+  // $(".social-icon").each(function(index) {
+  //   $(this).delay(800*index).animate({opacity: 1},300);
+  // });
+  $(".article-title").each(function(index) {
+    $(this).delay(50*index).animate({opacity: 1},200);
+  });
+  $(".publication-name").each(function(index) {
+    $(this).delay(100*index).animate({opacity: 1},100);
+  });
+
+
+
 })
+
+
+
+
 
 // image hover
 function imageHoverListener(){
@@ -24,7 +45,6 @@ function hideTitles(){
   removeHighlight.call(this);
 }
 function highlight(){
-  console.log("INSIDE HIGHLIGHT");
   var id = $(this).attr('dataid');
   $("#article-"+id).addClass('highlight');
 }
