@@ -1,5 +1,4 @@
-/*changes labelled 'custom'*/
-
+/*changes marked 'custom'*/
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -4956,7 +4955,7 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding-top: 30px;
+  padding-top: 40px;
   /*custom*/
   padding-bottom: 0px;
   color: inherit;
@@ -6761,64 +6760,271 @@ button.close {
  */
 
 /* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
-div.main-content {
-  padding-top: 129px;
+body {
+  padding: 0 30px;
 }
 
+/* line 2, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+div.main-content {
+  padding-top: 150px;
+}
+
+/* line 3, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+div.alert {
+  z-index: 9999;
+  position: relative;
+  top: 0;
+}
+
+/* line 8, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+.field_with_errors {
+  display: inline-block;
+}
+/* line 11, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+.field_with_errors label {
+  color: red;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("/assets/fonts/glyphicons-halflings-regular.eot");
+  src: url("/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
+@font-face {
+  font-family: 'Flaticon';
+  src: url(/Flaticon.eot);
+  src: url(/assets/Flaticon.eot?#iefix) format("embedded-opentype"), url(/assets/Flaticon.woff) format("woff"), url(/assets/Flaticon.ttf) format("truetype"), url(/assets/Flaticon.svg#flaticon) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 34, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+a,
+a:hover,
+a:active {
+  text-decoration: none !important;
+}
+
+/* line 38, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+/* social icons */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+/* line 53, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+/* line 68, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+.flaticon-social:before {
+  content: "\f100";
+}
+
+/* line 69, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+.flaticon-social-1:before {
+  content: "\f101";
+}
+
+/* line 70, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+.flaticon-social-2:before {
+  content: "\f102";
+}
+
+/* line 71, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+.flaticon-social-3:before {
+  content: "\f103";
+}
+
+/* line 72, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+.flaticon-social-4:before {
+  content: "\f104";
+}
+
+/* end social icons */
 /* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
 aside.sidebar {
   height: 100%;
-  position: fixed;
   left: 0;
-  border-right: 1px dotted black;
+}
+/* line 5, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
+aside.sidebar .publication-name {
+  font-size: 1.3rem;
+  margin: 5px 0 0 0;
+  cursor: pointer;
+}
+/* line 10, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
+aside.sidebar .article-title {
+  font-size: 1.3rem;
+  padding-left: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 0;
+  color: #999999;
+  background: #ff3232;
+  background: linear-gradient(to right, yellow 50%, white 50%);
+  background-size: 200% 110%;
+  background-position: right bottom;
+  transition: all .5s ease;
+}
+/* line 24, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
+aside.sidebar .article-title:hover,
+aside.sidebar .highlight {
+  color: #333333 !important;
+  background-position: left bottom !important;
+}
+/* line 30, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
+aside.sidebar hr {
+  margin: 0;
 }
 
-/* line 8, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
-.highlight {
-  background-color: yellow;
+/* line 33, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
+.article-title {
+  opacity: 0;
+}
+
+/* line 34, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
+.publication-name {
+  opacity: 0;
 }
 
 /* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
 div.articles-container {
-  position: absolute;
+  float: left;
   padding: 10px 5px 0 5px;
+  overflow: hidden;
   right: 0;
 }
 
 /* line 8, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
 div.portfolio-item {
-  padding-bottom: 10px;
+  opacity: 0;
+  -webkit-animation: load 5s infinite;
+  animation: load 5s infinite;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 0;
+  background: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-/* line 14, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+/* line 25, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
 .overlay {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-/* line 22, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
-.overlay h3 {
-  display: none;
   position: absolute;
-  padding: 0 10px 0px 10px;
-  bottom: 0;
-  margin: 0;
-  width: 100%;
   background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  top: 0;
+  height: 0;
+  left: 5px;
+  right: 0;
+  bottom: 5px;
+  z-index: 2;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 40, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+.overlay h2 {
+  font-size: 2rem;
+  color: black;
+  margin: 15px 0 0 0;
+  padding-bottom: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 50, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+.overlay p {
+  color: black;
+  text-align: right;
+  border-bottom: 1px solid black;
+  padding-right: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* line 62, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+.portfolio-item:hover .overlay {
+  height: 100%;
+}
+/* line 64, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+.portfolio-item:hover .overlay h2 {
+  opacity: 1;
+}
+/* line 65, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/articles.scss */
+.portfolio-item:hover .overlay p {
+  opacity: 1;
 }
 
 /* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
 div.main-header {
   position: fixed;
   top: 0;
-  z-index: 1;
-  border-bottom: 1px dotted black;
+  z-index: 10;
   background-color: white;
+}
+/* line 7, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
+div.main-header h1 {
+  font-size: 1.8rem;
+  font-family: 'Helvetica Neue', Arial;
+  font-weight: 700;
+}
+/* line 11, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
+div.main-header h1 a {
+  color: black;
+}
+/* line 15, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
+div.main-header .jumbotron {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 60px;
+}
+
+/* line 21, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
+.social-nav {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  height: 50px;
+  margin-top: -10px;
+}
+/* line 27, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
+.social-nav ul {
+  text-align: right;
+}
+/* line 28, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
+.social-nav li {
+  display: inline-block;
+}
+/* line 29, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/nav.scss */
+.social-nav i {
+  font-size: 3rem;
 }
 
 /* line 1, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/admin.scss */
@@ -6826,5 +7032,160 @@ div.admin-nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
+}
+
+/* line 8, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/admin.scss */
+.admin-controls {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 3;
+  padding: 0 10px 0 10px;
+}
+/* line 15, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/admin.scss */
+.admin-controls p {
+  margin: 0;
+}
+/* line 16, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/admin.scss */
+.admin-controls span {
+  cursor: pointer;
+}
+
+/*about me*/
+/* line 2, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.about-me-link {
+  border: 0px solid black;
+  color: black;
+  background: none;
+  position: relative;
+  transition: all .3s;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+/* line 12, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.about-me {
+  padding: 20px 10px 20px 20px;
+}
+
+/* line 14, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.about-me-link:after {
+  width: 101%;
+  height: 0%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  padding-bottom: 14px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: black;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all .3s;
+}
+
+/* line 33, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.about-me-link:hover:after {
+  height: 100%;
+  opacity: 1;
+}
+
+/* line 37, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.about-me-link:hover {
+  color: white;
+}
+
+/*social icons*/
+/* line 40, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.hi-icon-wrap {
+  text-align: center;
+}
+
+/* line 42, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* line 58, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.hi-icon:before {
+  speak: none;
+  font-size: 24.32px;
+  line-height: 45px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 70, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.hi-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Effect 1 */
+/* line 85, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.hi-icon-effect-1 .hi-icon {
+  background: silver;
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* line 92, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.hi-icon-effect-1 .hi-icon:after {
+  top: -7px;
+  left: -7px;
+  padding: 7px;
+  box-shadow: 0 0 0 4px #0066cc, 10px 10px 10px 0px black;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -webkit-transform: scale(0.8);
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+/*effect 1a*/
+/* line 108, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.hi-icon-effect-1a .hi-icon:hover {
+  background: #0066cc;
+  color: white;
+}
+
+/* line 113, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
+.hi-icon-effect-1a .hi-icon:hover:after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
 }

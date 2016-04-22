@@ -13,12 +13,23 @@ div.alert {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
+
   src: url('/assets/fonts/glyphicons-halflings-regular.eot');
-  src: url('/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-  url('/assets/fonts/glyphicons-halflings-regular.woff') format('woff'),
-  url('/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
-  url('/assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  src: url('/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/assets/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+@font-face {
+  font-family: 'Flaticon';
+  src: font-url('/Flaticon.eot');
+  src: font-url('/assets/Flaticon.eot?#iefix') format('embedded-opentype'),
+  font-url('/assets/Flaticon.woff') format('woff'),
+  font-url('/assets/Flaticon.ttf') format('truetype'),
+  font-url('/assets/Flaticon.svg#flaticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 a,
 a:hover,
@@ -30,16 +41,7 @@ ul {
 }
 
 /* social icons */
-@font-face {
-  font-family: 'Flaticon';
-  src: font-url('./Flaticon.eot');
-  src: font-url('/assets/Flaticon.eot?#iefix') format('embedded-opentype'),
-  font-url('/assets/Flaticon.woff') format('woff'),
-  font-url('/assets/Flaticon.ttf') format('truetype'),
-  font-url('/assets/Flaticon.svg#flaticon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
