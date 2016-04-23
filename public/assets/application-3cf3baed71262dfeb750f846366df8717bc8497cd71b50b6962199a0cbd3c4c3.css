@@ -6787,24 +6787,22 @@ div.alert {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/assets/fonts/glyphicons-halflings-regular.eot");
-  src: url("/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("/assets/glyphicons-halflings-regular.eot");
+  src: url("/assets/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/glyphicons-halflings-regular.woff2") format("woff2"), url("/assets/glyphicons-halflings-regular.woff") format("woff"), url("/assets/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 @font-face {
   font-family: 'Flaticon';
-  src: url(/Flaticon.eot);
-  src: url(/assets/Flaticon.eot?#iefix) format("embedded-opentype"), url(/assets/Flaticon.woff) format("woff"), url(/assets/Flaticon.ttf) format("truetype"), url(/assets/Flaticon.svg#flaticon) format("svg");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/assets/Flaticon.eot");
+  src: url("/assets/Flaticon.eot?#iefix") format("embedded-opentype"), url("/assets/Flaticon.woff2") format("woff2"), url("/assets/Flaticon.woff") format("woff"), url("/assets/Flaticon.ttf") format("truetype"), url("/assets/Flaticon.svg#glyphicons_halflingsregular") format("svg");
 }
-/* line 34, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+/* line 27, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
 a,
 a:hover,
 a:active {
   text-decoration: none !important;
 }
 
-/* line 38, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+/* line 31, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
 ul {
   list-style-type: none;
   margin: 0;
@@ -6817,7 +6815,7 @@ ul {
     src: url("./Flaticon.svg#Flaticon") format("svg");
   }
 }
-/* line 53, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+/* line 46, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
 .fi:before {
   display: inline-block;
   font-family: "Flaticon";
@@ -6833,27 +6831,27 @@ ul {
   font-smoothing: antialiased;
 }
 
-/* line 68, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+/* line 61, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
 .flaticon-social:before {
   content: "\f100";
 }
 
-/* line 69, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+/* line 62, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
 .flaticon-social-1:before {
   content: "\f101";
 }
 
-/* line 70, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+/* line 63, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
 .flaticon-social-2:before {
   content: "\f102";
 }
 
-/* line 71, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+/* line 64, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
 .flaticon-social-3:before {
   content: "\f103";
 }
 
-/* line 72, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
+/* line 65, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/base/globals.scss */
 .flaticon-social-4:before {
   content: "\f104";
 }
@@ -6880,9 +6878,9 @@ aside.sidebar .article-title {
   color: #999999;
   background: #ff3232;
   background: linear-gradient(to right, yellow 50%, white 50%);
-  background-size: 200% 110%;
+  background-size: 280% 100%;
   background-position: right bottom;
-  transition: all .5s ease;
+  transition: all .9s ease;
 }
 /* line 24, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/sidebar.scss */
 aside.sidebar .article-title:hover,
@@ -7183,9 +7181,9 @@ div.admin-nav {
 
 /* line 113, /Users/Balthasar/Desktop/projects/JOGPortfolio/app/assets/stylesheets/styles/social_icons.scss */
 .hi-icon-effect-1a .hi-icon:hover:after {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -ms-transform: scale(0.85);
+  transform: scale(0.85);
   opacity: 1;
 }
