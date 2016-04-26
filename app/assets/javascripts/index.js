@@ -1,33 +1,26 @@
 "use strict";
 
-$( document ).ready(function(){
-  console.log("doc-ready!")
+$( document ).on('page:load', function(){
   imageHoverListener();
   sideBarPublicationListener();
   priorityArrowListener();
   deleteArticleListener();
 
+  fadeInLoad();
 
-  $(".articles-container .portfolio-item").each(function(index) {
+})
+
+function fadeInLoad(){
+$(".articles-container .portfolio-item").each(function(index) {
     $(this).delay(150*index).animate({opacity: 1},100);
   });
-  // $(".social-icon").each(function(index) {
-  //   $(this).delay(800*index).animate({opacity: 1},300);
-  // });
   $(".article-title").each(function(index) {
     $(this).delay(50*index).animate({opacity: 1},200);
   });
   $(".publication-name").each(function(index) {
     $(this).delay(100*index).animate({opacity: 1},100);
   });
-
-
-
-})
-
-
-
-
+}
 
 // image hover
 function imageHoverListener(){
