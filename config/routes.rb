@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root 'articles#index'
   get 'admin' => 'users#new'
+  get 'about-me' => 'users#show'
   post 'admin' => 'sessions#login'
   get 'logout' => 'sessions#logout'
 
   resources :articles
-
   resources :publications, only: [:create, :edit, :destroy]
 
   # Example of regular route:

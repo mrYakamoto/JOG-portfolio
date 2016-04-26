@@ -1,17 +1,21 @@
 /*about me*/
-.about-me-link {
+.social-link {
   border: 0px solid black;
   color: black;
   background: none;
-
   position: relative;
-  transition: all .3s;
   text-align: center;
   padding: 10px 20px;
+  transition: all .3s;
 }
-.about-me { padding: 20px 10px 20px 20px; }
+.social-link:visited { color: black; }
+.social-link.text { font-weight: 600; }
+.social-item {
+  .logo { font-size: 2.5rem;}
+  vertical-align: middle;
+}
 
-.about-me-link:after {
+.social-link:after {
   width: 101%;
   height: 0%;
   top: 50%;
@@ -22,96 +26,14 @@
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-
   background: black;
   content: '';
   position: absolute;
   z-index: -1;
   transition: all .3s;
 }
-
-.about-me-link:hover:after{
+.social-link:hover:after{
   height: 100%;
   opacity: 1;
 }
-.about-me-link:hover { color: white; }
-
-/*social icons*/
-.hi-icon-wrap { text-align: center; }
-
-.hi-icon {
-  display: inline-block;
-  font-size: 0px;
-  cursor: pointer;
-  margin-right: 5px;
-  margin-bottom: 15px;
-  margin-left: 5px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  color: #fff;
-}
-
-.hi-icon:before {
-  speak: none;
-  font-size: 24.32px;
-  line-height: 45px;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  display: block;
-  -webkit-font-smoothing: antialiased;
-}
-
-.hi-icon:after {
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  content: '';
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-/* Effect 1 */
-.hi-icon-effect-1 .hi-icon {
-  background: rgba(192,192,192,1);
-  -webkit-transition: background 0.2s, color 0.2s;
-  -moz-transition: background 0.2s, color 0.2s;
-  transition: background 0.2s, color 0.2s;
-}
-
-.hi-icon-effect-1 .hi-icon:after {
-  top: -7px;
-  left: -7px;
-  padding: 7px;
-  box-shadow: 0 0 0 4px rgba(0,102,204,1), 10px 10px 10px 0px black;
-  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-  -webkit-transform: scale(.8);
-  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
-  -moz-transform: scale(.8);
-  -ms-transform: scale(.8);
-  transition: transform 0.2s, opacity 0.2s;
-  transform: scale(.8);
-  opacity: 0;
-}
-
-/*effect 1a*/
-.hi-icon-effect-1a .hi-icon:hover {
-  background: rgba(0,102,204,1);
-  color: white;
-}
-
-.hi-icon-effect-1a .hi-icon:hover:after {
-  -webkit-transform: scale(.85);
-  -moz-transform: scale(.85);
-  -ms-transform: scale(.85);
-  transform: scale(.85);
-  opacity: 1;
-}
+.social-link:hover { color: white; }
