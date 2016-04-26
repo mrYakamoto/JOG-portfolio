@@ -1,6 +1,6 @@
 "use strict";
 
-$( document ).on('page:load', function(){
+$( document ).on('ready page:load', function(){
   imageHoverListener();
   sideBarPublicationListener();
   priorityArrowListener();
@@ -15,7 +15,7 @@ $(".articles-container .portfolio-item").each(function(index) {
     $(this).delay(150*index).animate({opacity: 1},100);
   });
   $(".article-title").each(function(index) {
-    $(this).delay(50*index).animate({opacity: 1},200);
+    $(this).delay(50*index).animate({opacity: 1},100);
   });
   $(".publication-name").each(function(index) {
     $(this).delay(100*index).animate({opacity: 1},100);
