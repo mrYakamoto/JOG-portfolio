@@ -1,10 +1,20 @@
 <div class="about-me-picture">
-  <img class="col-xs-5" src="http://41.media.tumblr.com/6975ec784d027b243b219d6c829db501/tumblr_inline_npsefz1wlZ1rp5t2m_500.jpg">
+  <%= image_tag @user.picture.url, class: "col-xs-5" %>
 </div>
 
 <div class="col-xs-7">
   <h1>Jason O. Gilbert</h1>
-  <h2>Writer, Editor, Inspiration for the 2009 Film "Hotel for Dogs"</h2>
+  <% if current_admin? %>
+    <%= form_for @user do |f| %>
+      <%= f.label "Picture" %>
+      <%= f.file_field :picture %><br>
+      <%= f.label "about-me body" %>
+      <%= f.text_area :about_me_body, size: "40x15" %>
+      <%= f.submit "update" %>
+    <% end %>
+  <% else %>
+    <h3><%= @user.about_me_body %></h3>
+  <% end %>
 </div>
 
 

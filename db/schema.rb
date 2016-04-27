@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160413230330) do
+ActiveRecord::Schema.define(version: 20160427174716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20160413230330) do
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.string   "url"
-    t.string   "image_url"
     t.integer  "featured"
+    t.string   "image_url"
     t.integer  "priority",             default: 0
     t.integer  "publication_id"
     t.datetime "created_at",                       null: false
@@ -40,8 +40,13 @@ ActiveRecord::Schema.define(version: 20160413230330) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "about_me_body"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end
