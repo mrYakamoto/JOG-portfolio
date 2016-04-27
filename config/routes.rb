@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :publications, only: [:create, :edit, :destroy]
+  resources :users, only: [:update]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

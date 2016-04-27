@@ -1,4 +1,4 @@
-admin = User.new(username: "admin")
+admin = User.new(username: "admin", about_me_body: "Writer, Editor, Inspiration for the 2009 Film 'Hotel for Dogs'")
 admin.password = "password"
 admin.save!
 puts "==========Created-Admin=========="

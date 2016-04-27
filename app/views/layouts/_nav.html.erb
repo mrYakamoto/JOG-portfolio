@@ -1,3 +1,7 @@
+<% if current_admin? %>
+<%= render partial: 'layouts/admin_nav' %>
+<% end %>
+
 <div class="container-fluid navbar navbar-fixed-top main-header col-xs-12">
   <div class="navbar-inner">
     <div class="container-fluid">
@@ -9,7 +13,7 @@
         <div class="social-nav">
           <ul class="">
             <li class="social-item">
-              <a href="about-me" class="social-link text">about me</a>
+              <a href="/about-me" class="social-link text">about me</a>
             </li>
             <li class="social-item">
               <a href="https://twitter.com/gilbertjasono" class="social-link logo fi flaticon-social-3" title="twitter"></a>
