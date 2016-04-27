@@ -5,10 +5,10 @@
 <div class="col-xs-7">
   <h1>Jason O. Gilbert</h1>
   <% if current_admin? %>
-    <%= form_for @user do |f| %>
+    <%= form_for @user, multipart: true do |f| %>
       <%= f.label "Picture" %>
-      <%= f.file_field :picture %><br>
-      <%= f.label "about-me body" %>
+      <%= f.file_field :picture %><br><br>
+      <%= f.label "about-me body" %><br>
       <%= f.text_area :about_me_body, size: "40x15" %>
       <%= f.submit "update" %>
     <% end %>
