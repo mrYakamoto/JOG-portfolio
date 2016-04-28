@@ -33,6 +33,8 @@ class ArticlesController < ApplicationController
       @article.save
     else
       @article.update(article_params)
+      @article.picture_from_url
+      @article.save
     end
 
     respond_to do |format|
