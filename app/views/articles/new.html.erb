@@ -1,29 +1,35 @@
 <% if @article.errors %>
 <% end %>
-<div class="container">
-<%= form_for @article do |f| %>
+<div class="container col-xs-12">
+  <div class="col-xs-6 pull-left form-container">
+    <h3>Add New Article: </h3>
+    <%= form_for @article do |f| %>
+    <%= f.label :title %>:
+    <%= f.text_field :title %> <br/>
+    <%= f.label :url %>:
+    <%= f.text_field :url %> <br/>
+    <%= f.label :image_url %>:
+    <%= f.text_field :image_url %> <br/>
+    <%= f.label 'Publication #' %>:
+    <%= f.number_field :publication_id%> <br/>
 
-  <%= f.label :title %>:
-  <%= f.text_field :title %> <br/>
-  <%= f.label :url %>:
-  <%= f.text_field :url %> <br/>
-  <%= f.label :image_url %>:
-  <%= f.text_field :image_url %> <br/>
-  <%= f.label :publication_id %>:
-  <%= f.number_field :publication_id%> <br/>
+    <%= f.submit value: "submit"%>
+    <% end %>
 
-  <%= f.submit value: "submit"%>
-<% end %>
+    <h3>Add New Publication:</h3>
+    <%= form_for 'publication', url: {controller: 'publications', action: 'create'} do |f| %>
+    <%= f.label :name %>:
+    <%= f.text_field :name %> <br/>
 
-<% Publication.all.each do |publication| %>
-<h5><%= publication.id %>)<%= publication.name %> <%=link_to "delete", publication, method: :delete, class: "btn btn-danger btn-sm", role: "button" %></h5>
+    <%= f.submit value: "add publication"%>
+    <% end %>
+  </div>
+  <div class="col-xs-6 pull-left">
+    <% Publication.all.each do |publication| %>
+      <h5 class="col-xs-7"><%= publication.id %>)<%= publication.name %></h5> <%=link_to "delete", publication, method: :delete, class: "pull-left btn btn-danger btn-sm col-xs-4", role: "button" %>
+    </br></br>
 
-<% end %>
+    <% end %>
+  </div>
 
-<%= form_for 'publication', url: {controller: 'publications', action: 'create'} do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %> <br/>
-
-  <%= f.submit value: "add publication"%>
-<% end %>
 </div>
