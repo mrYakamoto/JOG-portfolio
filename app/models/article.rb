@@ -3,9 +3,12 @@ require "open-uri"
 class Article < ActiveRecord::Base
   belongs_to :publication
   has_attached_file :picture,
+  :styles => {thumb: "525x300#"},
+  :storage => :s3,
   :bucket => 'jason-pictures',
   :s3_protocol => :https,
-  styles: {thumb: "525x300#"}
+  :s3_host_name => 's3-us-west-2.amazonaws.com'
+
 
   after_create :picture_from_url, :unless => Proc.new { |a| a.image_url == "" }
 
