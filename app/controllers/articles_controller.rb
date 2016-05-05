@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+ class ArticlesController < ApplicationController
   def index
     @featured_articles = Article.featured_by_priority
     @publications = Publication.all

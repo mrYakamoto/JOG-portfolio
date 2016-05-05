@@ -1,11 +1,11 @@
 admin = User.new(username: "admin", about_me_body: "Writer, Editor, Inspiration for the 2009 Film 'Hotel for Dogs'")
 admin.password = "password"
-admin.save!
+admin.save
 puts "==========Created-Admin=========="
 
 publications_list = ["The New York Times", "McSweeney's","Slate","Quartz","The Toast", "Fusion", "Above Average", "Vulture", "Medium", "Random Internet", "Comedic Poems / Collages"]
 publications_list.each do |name|
-  Publication.create!(name: name)
+  Publication.create(name: name)
 end
 puts "==========Created-Publications=========="
 
