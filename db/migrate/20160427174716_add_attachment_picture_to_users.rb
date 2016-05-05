@@ -1,8 +1,6 @@
 class AddAttachmentPictureToUsers < ActiveRecord::Migration
   def self.up
-    change_table :users do |t|
-      t.attachment :picture
-    end
+    add_attachment :users, :picture
   end
 
   def self.down
