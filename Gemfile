@@ -16,6 +16,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'puma'
+gem 'aws-sdk', '~> 1.6'
 
 # heroku asset handling
 gem 'rails_12factor', group: :production
