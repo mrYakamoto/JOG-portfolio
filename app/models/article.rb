@@ -5,6 +5,7 @@ class Article < ActiveRecord::Base
   has_attached_file :picture,
   :bucket => 'jason-pictures',
   :s3_protocol => :https,
+  :s3_region => 'Oregon',
   styles: {thumb: "525x300#"}
 
   after_create :picture_from_url, :unless => Proc.new { |a| a.image_url == "" }

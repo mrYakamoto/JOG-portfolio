@@ -14,7 +14,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
-gem 'paperclip', '3.0.4'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'puma'
 gem 'aws-sdk', '~> 2.3'
 
