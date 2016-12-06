@@ -7,7 +7,8 @@ class Article < ActiveRecord::Base
   :storage => :s3,
   :bucket => 'jason-pictures',
   :s3_protocol => :https,
-  :s3_host_name => 's3-us-west-2.amazonaws.com'
+  :s3_host_name => 's3-us-west-2.amazonaws.com',
+  :s3_region => 'us-west-2'
 
 
   after_create :picture_from_url, :unless => Proc.new { |a| a.image_url == "" }
