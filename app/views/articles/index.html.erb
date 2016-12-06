@@ -1,24 +1,25 @@
 <%= render partial: 'layouts/sidebar' %>
 
 <div class="container col-xs-12 col-sm-8 articles-container">
-
-  <% @featured_articles.each do |article|%>
-  <div class="col-xs-6 portfolio-item pull-left" dataid=<%=article.id%> datapriority=<%= article.priority %>>
-    <% if current_admin? %>
-    <div class="admin-controls">
-      <p><span class="glyphicon glyphicon-arrow-up priority-arrow priority-up"></span>  <span class="priority-number"><%= article.priority %></span>  <span class="glyphicon glyphicon-arrow-down priority-arrow priority-down"></span>    <a href="/articles/<%= article.id %>/edit"><span class="glyphicon glyphicon-pencil"></span></a>    <span class="glyphicon glyphicon-remove delete-article" dataid=<%=article.id%> ></span></p>
-    </div>
-    <% end %>
-    <a href="<%= article.url %>">
-     <%= image_tag article.picture.url(:thumb), {class: "img-responsive", id: "image-#{article.id}", dataId: "#{article.id}" } %>
-   </a>
-   <a href="<%= article.url %>">
-    <div class="overlay">
-      <h2><%= article.title %></h2>
-      <p><%= article.publication.name %></p>
-    </div>
+  <% if @featured_articles %>
+    <% @featured_articles.each do |article|%>
+    <div class="col-xs-6 portfolio-item pull-left" dataid=<%=article.id%> datapriority=<%= article.priority %>>
+      <% if current_admin? %>
+      <div class="admin-controls">
+        <p><span class="glyphicon glyphicon-arrow-up priority-arrow priority-up"></span>  <span class="priority-number"><%= article.priority %></span>  <span class="glyphicon glyphicon-arrow-down priority-arrow priority-down"></span>    <a href="/articles/<%= article.id %>/edit"><span class="glyphicon glyphicon-pencil"></span></a>    <span class="glyphicon glyphicon-remove delete-article" dataid=<%=article.id%> ></span></p>
+      </div>
+      <% end %>
+      <a href="<%= article.url %>">
+      <%= image_tag article.picture.url(:thumb), {class: "img-responsive", id: "image-#{article.id}", dataId: "#{article.id}" } %>
     </a>
-</div>
+    <a href="<%= article.url %>">
+      <div class="overlay">
+        <h2><%= article.title %></h2>
+        <p><%= article.publication.name %></p>
+      </div>
+      </a>
+  </div>
+  <% end %>
 <% end %>
 
 <hr>
