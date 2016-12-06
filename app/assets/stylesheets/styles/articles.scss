@@ -9,7 +9,8 @@ div.portfolio-item {
   opacity: 0;
   -webkit-animation: load 5s infinite;
    animation: load 5s infinite;
-
+  
+  max-width: 525px;
   overflow: hidden;
   position: relative;
   display: inline-block;
