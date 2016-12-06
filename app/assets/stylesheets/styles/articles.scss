@@ -25,6 +25,7 @@ div.portfolio-item {
 .overlay {
   position: absolute;
   background-color: white;
+  max-width: 525px;
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;

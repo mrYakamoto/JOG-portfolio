@@ -19,6 +19,7 @@ aside.sidebar {
     background: linear-gradient(to right, yellow 50%, white 50%);
     background-size: 280% 100%;
     background-position:right bottom;
+    background-repeat: no-repeat;
     transition:all .9s ease;
   }
   .article-title:hover,
